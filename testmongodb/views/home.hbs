@@ -92,11 +92,11 @@
 </div>
 <script>
   function capnhat(){
-    var copyButton = document.querySelector('.left-button button[type="submit"]');
+    const showBtn = document.querySelector('#left-button')
   copyButton.disabled = false;
   }
 function copyText() {
-   var copyButton = document.querySelector('.left-button button[type="submit"]');
+   var copyButton = document.getElementsByClassName('left-button');
   copyButton.disabled = true;
   var firstEmail =document.querySelector("#email-list li:first-child");
   if (firstEmail) {
