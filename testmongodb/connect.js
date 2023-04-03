@@ -31,8 +31,8 @@ app.get('/ip', async (req, res) => {
   const emails = lines.map(line => line.split('|')[0]);
   await mongoose.connect(url).then(console.log('kets noi db thanh cong'));
   const ip = await ipModel.find();
-  res.render('home', { allip: ip.map(data => data.toJSON()), emails });
-
+  res.render('home', { allip: ip.map(data => data.toJSON()), emails ,copysucess:true});
+console.log(ip.length)
 
   for (let i = 0; i < ip.length; i++) {
     let s = ip[i];
